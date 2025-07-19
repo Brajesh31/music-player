@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fonts/remixicon.css">
+    <link rel="icon" href="images/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <title>Music Player</title>
+</head>
+<body>
+    <aside>
+        <div class="component">
+            <div class="logo">
+                <a href="#">
+                    <div class="icon" style="--color: #9438e5"><i class="ri-blaze-fill"></i></div>
+                    <h1>MELO</h1>
+                </a>
+            </div>
+            <div class="nav-menu">
+                <ul class="menu">
+                    <li class="link active">
+                        <a href="#">
+                            <div class="icon" style="--color: #dc3636"><i class="ri-voiceprint-line"></i></div>
+                            <span class="name">Feed</span>
+                            <span class="flow">Feed</span>
+                        </a>
+                    </li>
+                    <li class="link">
+                        <a href="#">
+                            <div class="icon" style="--color: #52dc36"><i class="ri-play-list-fill"></i></div>
+                            <span class="name">PlayList</span>
+                            <span class="flow">PlayList</span>
+                        </a>
+                    </li>
+                    <li class="link">
+                        <a href="#">
+                            <div class="icon" style="--color: #17aecf"><i class="ri-pie-chart-2-fill"></i></div>
+                            <span class="name">Statistics</span>
+                            <span class="flow">Statistics</span>
+                        </a>
+                    </li>
+                    <li class="link">
+                        <a href="#">
+                            <div class="icon" style="--color: #28e6ba"><i class="ri-music-2-fill"></i></div>
+                            <span class="name">Songs</span>
+                            <span class="flow">Songs</span>
+                        </a>
+                    </li>
+                    <li class="link">
+                        <a href="#">
+                            <div class="icon" style="--color: #e6d028"><i class="ri-disc-line"></i></div>
+                            <span class="name">Album</span>
+                            <span class="flow">Album</span>
+                        </a>
+                    </li>
+                    <li class="link">
+                        <a href="#">
+                            <div class="icon" style="--color: #155983"><i class="ri-book-shelf-line"></i></div>
+                            <span class="name">Library</span>
+                            <span class="flow">Library</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="menu">
+                    <h3 class="title">YOUR MUSIC</h2>
+                    <li class="link">
+                        <a href="#">
+                            <div class="icon" style="--color: #e22da9"><i class="ri-heart-2-line"></i></div>
+                            <span class="name">Favourites</span>
+                            <span class="flow">Favourites</span>
+                        </a>
+                    </li>
+                    <li class="link">
+                        <a href="#">
+                            <div class="icon" style="--color: #392de2"><i class="ri-time-line"></i></div>
+                            <span class="name">Listen Later</span>
+                            <span class="flow">Listen Later</span>
+                        </a>
+                    </li>
+                    <li class="link">
+                        <a href="#">
+                            <div class="icon" style="--color: #b8e74a"><i class="ri-hourglass-2-fill"></i></div>
+                            <span class="name">History</span>
+                            <span class="flow">History</span>
+                        </a>
+                    </li>
+                    <li class="link">
+                        <a href="#">
+                            <div class="icon" style="--color: #ad4ae7"><i class="ri-broadcast-fill"></i></div>
+                            <span class="name">Podcasts</span>
+                            <span class="flow">Podcasts</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="menu circle">
+                    <h3 class="title">YOUR PLAYLISTS</h2>
+                    <li class="link">
+                        <a href="#">
+                            <div class="icon" style="--color: #e10707"><i class="ri-focus-2-line"></i></div>
+                            <span class="name">Metalcore</span>
+                            <span class="flow">Metalcore</span>
+                        </a>
+                    </li>
+                    <li class="link">
+                        <a href="#">
+                            <div class="icon" style="--color: #c3f400"><i class="ri-focus-2-line"></i></div>
+                            <span class="name">Disco</span>
+                            <span class="flow">Disco</span>
+                        </a>
+                    </li>
+                    <li class="link">
+                        <a href="#">
+                            <div class="icon" style="--color: #580bb0"><i class="ri-focus-2-line"></i></div>
+                            <span class="name">Electro</span>
+                            <span class="flow">Electro</span>
+                        </a>
+                    </li>
+                    <li class="link">
+                        <a href="#">
+                            <div class="icon" style="--color: #0bb016"><i class="ri-focus-2-line"></i></div>
+                            <span class="name">Func</span>
+                            <span class="flow">Func</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+    
+    <main>
+        <header>
+             <div class="container">
+                 <div class="search">
+                     <div class="bar">
+                        <div class="icon"><i class="ri-search-line"></i></div>
+                        <input type="text" placeholder="Search for...">
+                     </div>
+                 </div>
+                 <div class="tools" #mood>
+                    <div class="icon" id="menu"><i class="ri-menu-3-fill"></i></div>
+                    <div class="icon"><i class="ri-notification-3-line"></i></div>
+                    <div class="mood dark" id="mood">
+                        <div class="dark"><i class="ri-moon-fill"></i></div>
+                        <div class="light"><i class="ri-sun-line"></i></div>
+                        <span class="mood-name" id="mood_name">Dark Mode</span>
+                    </div>
+                 </div>
+             </div>
+        </header>
+
+        <div class="main-content">
+            <div class="container">
+                <section class="popular">
+                    <div class="head">
+                        <h2 class="section-title">Popular Releases</h2>
+                        <div class="btns">
+                            <button id="prev"><i class="ri-arrow-left-s-line"></i></button>
+                            <button id="next"><i class="ri-arrow-right-s-line"></i></button>
+                        </div>
+                    </div>
+                    <div class="slider">
+                        <div class="slide">
+                            <div class="img"><img src="./images/cover 1.jpg" alt="cover 1"></div>
+                            <div class="detail">
+                                <h4 class="song-name">Abstract</h4>
+                                <p class="album">2024 . Album</p>
+                            </div>
+                        </div>
+
+                        <div class="slide">
+                            <div class="img"><img src="./images/cover 2.jpg" alt="cover 2"></div>
+                            <div class="detail">
+                                <h4 class="song-name">Halloween</h4>
+                                <p class="album">2024 . Album</p>
+                            </div>
+                        </div>
+                        
+                        <div class="slide">
+                            <div class="img"><img src="./images/cover 3.jpg" alt="cover 3"></div>
+                            <div class="detail">
+                                <h4 class="song-name">LoveLine</h4>
+                                <p class="album">2019 . Album</p>
+                            </div>
+                        </div>
+                        
+                        <div class="slide">
+                            <div class="img"><img src="./images/cover 4.jpg" alt="cover 4"></div>
+                            <div class="detail">
+                                <h4 class="song-name">Equals</h4>
+                                <p class="album">2021 . Album</p>
+                            </div>
+                        </div>
+                        
+                        <div class="slide">
+                            <div class="img"><img src="./images/cover 5.jpg" alt="cover 5"></div>
+                            <div class="detail">
+                                <h4 class="song-name">Rockstar</h4>
+                                <p class="album">Latest Reeleases</p>
+                            </div>
+                        </div>
+                        
+                        <div class="slide">
+                            <div class="img"><img src="./images/cover 6.jpg" alt="cover 6"></div>
+                            <div class="detail">
+                                <h4 class="song-name">Music</h4>
+                                <p class="album">2024 . Album</p>
+                            </div>
+                        </div>
+                        
+                        <div class="slide">
+                            <div class="img"><img src="./images/cover 7.jpg" alt="cover 7"></div>
+                            <div class="detail">
+                                <h4 class="song-name">Perfect</h4>
+                                <p class="album">2020 . Album</p>
+                            </div>
+                        </div>
+                        
+                        <div class="slide">
+                            <div class="img"><img src="./images/cover 8.jpg" alt="cover 8"></div>
+                            <div class="detail">
+                                <h4 class="song-name">Feel Something</h4>
+                                <p class="album">2024 . Album</p>
+                            </div>
+                        </div>
+
+                        <div class="slide">
+                            <div class="img"><img src="./images/cover 9.jpg" alt="cover 9"></div>
+                            <div class="detail">
+                                <h4 class="song-name">Empty Promise</h4>
+                                <p class="album">2023 . Album</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="playlist">
+                    <div class="container">
+                        <div class="header">
+                            <div class="item active">
+                                <p>Playlists</p>
+                            </div>
+                            <div class="item">
+                                <p>Artists</p>
+                            </div>
+                            <div class="item">
+                                <p>Albums</p>
+                            </div>
+                            <div class="item">
+                                <p>Streams</p>
+                            </div>
+                            <div class="item">
+                                <p>Friend's playlist</p>
+                            </div>
+                        </div>
+                        <table>
+                            <tbody>
+                                <tr class="active">
+                                    <td><img src="images/cover 11.jpg" alt="song 1"></td>
+                                    <td>Workout at the gym</td>
+                                    <td>29 tracks . 2h 15m</td>
+                                    <td>23 Jun,2023</td>
+                                    <td><i class="ri-play-fill"></i></td>
+                                    <td><i class="ri-more-2-fill"></i></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="images/cover 12.jpg" alt="song 2"></td>
+                                    <td>Tracks without lirycs</td>
+                                    <td>35 tracks . 2h 1m</td>
+                                    <td>27 Apr,2023</td>
+                                    <td><i class="ri-play-fill"></i></td>
+                                    <td><i class="ri-more-2-fill"></i></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="images/cover 13.jpeg" alt="song 3"></td>
+                                    <td>Funny stuff</td>
+                                    <td>108 tracks . 7h 40m</td>
+                                    <td>12 Feb,2023</td>
+                                    <td><i class="ri-play-fill"></i></td>
+                                    <td><i class="ri-more-2-fill"></i></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="images/cover 14.jpeg" alt="song 4"></td>
+                                    <td>Careful driving vibes</td>
+                                    <td>82 tracks . 4h 59m</td>
+                                    <td>18 May,2023</td>
+                                    <td><i class="ri-play-fill"></i></td>
+                                    <td><i class="ri-more-2-fill"></i></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="images/cover 15.jpeg" alt="song 5"></td>
+                                    <td>philosophy during walking</td>
+                                    <td>50 tracks . 4h 30m</td>
+                                    <td>21 Dec2022</td>
+                                    <td><i class="ri-play-fill"></i></td>
+                                    <td><i class="ri-more-2-fill"></i></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section class="feture">
+                    <div class="container">
+                        <div class="offer-box">
+                            <div class="data">
+                                <h2>Check the power <br> of <span>MELO</span></h2>
+                                <p class="discription">
+                                    Enjoy uninterrupted music streaming <br> with our premium subscription
+                                </p>
+                                <button>Upgrade</button>
+                            </div>
+                            <div class="img"><img src="images/ring.png" alt=""></div>
+                        </div>
+                        <div class="static">
+                            <div class="sta-head">
+                                <h4>StATISTICS</h4>
+                                <p>Explore</p>
+                            </div>
+                            <div class="boxs">
+                                <div class="box">
+                                    <div class="box-data">
+                                        <p class="b-name">LIKES</p>
+                                        <p class="num">247</p>
+                                    </div>
+                                    <div class="icon"><i class="ri-heart-line"></i></div>
+                                </div>
+                                <div class="box">
+                                    <div class="box-data">
+                                        <p class="b-name">TRACKS</p>
+                                        <p class="num">363</p>
+                                    </div>
+                                    <div class="icon"><i class="ri-music-fill"></i></div>
+                                </div>
+                                <div class="box">
+                                    <div class="box-data">
+                                        <p class="b-name">STREAMS</p>
+                                        <p class="num">29</p>
+                                    </div>
+                                    <div class="icon"><i class="ri-base-station-line"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+
+    </main>
+    
+    <div class="side-bar">
+        <div class="chanel">
+            <button class="chanel-btn">
+                <span>My channel</span>
+                <i class="ri-arrow-right-s-line"></i>
+            </button>
+            <div class="profile">
+                <div class="icon">
+                    <i class="ri-cast-line"></i>
+                </div>
+                <div class="pro-img">
+                    <img src="images/profile.jpg" alt="profile">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="new">
+                <div class="head-data">
+                    <p class="head-name">NEW RELEASES</p>
+                    <p class="see">See all</p>
+                </div>
+                <div class="list">
+                    <div class="song">
+                        <img src="images/cover 10.jpg" alt="new song 1">
+                    </div>
+                    <div class="song-data">
+                        <h4 class="song-name">
+                            Calamity
+                        </h4>
+                        <p>rack . Annisokay.Calamity . 2023</p>
+                    </div>
+                </div>
+                <div class="list">
+                    <div class="song">
+                        <img src="images/cover 16.jpeg" alt="new song 2">
+                    </div>
+                    <div class="song-data">
+                        <h4 class="song-name">
+                            Last Resort
+                        </h4>
+                        <p>rack . Falling in Reverse .single . 2023</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="new more">
+                <div class="head-data">
+                    <p class="head-name">LISTEN MORE OFTEN</p>
+                </div>
+                <div class="list">
+                    <div class="song-box">
+                        <div class="song">
+                            <img src="images/cover 17.jpg" alt="new song 3">
+                        </div>
+                        <div class="song-data">
+                            <h4 class="song-name">
+                                Blood Orange
+                            </h4>
+                            <p>Berried Ative</p>
+                        </div>
+                    </div>
+                    <div class="icons">
+                        <div class="icon love"><i class="ri-heart-fill"></i></div>
+                        <div class="icon"><i class="ri-more-2-fill"></i></div>
+                    </div>
+                </div>
+                <div class="list">
+                    <div class="song-box">
+                        <div class="song">
+                            <img src="images/cover 18.jpg" alt="new song 4">
+                        </div>
+                        <div class="song-data">
+                            <h4 class="song-name">
+                                Soul Decay
+                            </h4>
+                            <p>Make Them Suffer</p>
+                        </div>
+                    </div>
+                    <div class="icons">
+                        <div class="icon love"><i class="ri-heart-fill"></i></div>
+                        <div class="icon"><i class="ri-more-2-fill"></i></div>
+                    </div>
+                </div>
+                <div class="list">
+                    <div class="song-box">
+                        <div class="song">
+                            <img src="images/cover 19.jpg" alt="new song 4">
+                        </div>
+                        <div class="song-data">
+                            <h4 class="song-name">
+                                A Little Bit Off
+                            </h4>
+                            <p>Five Finger Death Punch</p>
+                        </div>
+                    </div>
+                    <div class="icons">
+                        <div class="icon love"><i class="ri-heart-fill"></i></div>
+                        <div class="icon"><i class="ri-more-2-fill"></i></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="new favourite">
+                <div class="head-data">
+                    <p class="head-name">FAVOURITE ARTISTS</p>
+                    <p class="see">See all</p>
+                </div>
+                <div class="list">
+                    <div class="song-box">
+                        <div class="song">
+                            <img src="images/cover 7.jpg" alt="new song 3">
+                        </div>
+                        <div class="song-data">
+                            <h4 class="song-name">
+                               Ice Nine Kills
+                            </h4>
+                            <p>432K subscribers</p>
+                        </div>
+                    </div>
+                    <div class="icons">
+                        <div class="icon"><i class="ri-arrow-right-s-line"></i></div>
+                    </div>
+                </div>
+                <div class="list">
+                    <div class="song-box">
+                        <div class="song">
+                            <img src="images/cover 9.jpg" alt="new song 4">
+                        </div>
+                        <div class="song-data">
+                            <h4 class="song-name">
+                                Bloodwood
+                            </h4>
+                            <p>42K subscribers</p>
+                        </div>
+                    </div>
+                    <div class="icons">
+                        <div class="icon"><i class="ri-arrow-right-s-line"></i></div>
+                    </div>
+                </div>
+                <div class="list">
+                    <div class="song-box">
+                        <div class="song">
+                            <img src="images/cover 1.jpg" alt="new song 4">
+                        </div>
+                        <div class="song-data">
+                            <h4 class="song-name">
+                                Bad Omens
+                            </h4>
+                            <p>242K subscribers</p>
+                        </div>
+                    </div>
+                    <div class="icons">
+                        <div class="icon"><i class="ri-arrow-right-s-line"></i></div>
+                    </div>
+                </div>
+                <div class="list">
+                    <div class="song-box">
+                        <div class="song">
+                            <img src="images/cover 17.jpg" alt="new song 4">
+                        </div>
+                        <div class="song-data">
+                            <h4 class="song-name">
+                                Lorna Shore
+                            </h4>
+                            <p>108K subscribers</p>
+                        </div>
+                    </div>
+                    <div class="icons">
+                        <div class="icon"><i class="ri-arrow-right-s-line"></i></div>
+                    </div>
+                </div>
+                <div class="list">
+                    <div class="song-box">
+                        <div class="song">
+                            <img src="images/cover 19.jpg" alt="new song 4">
+                        </div>
+                        <div class="song-data">
+                            <h4 class="song-name">
+                                A Little Bit Off
+                            </h4>
+                            <p>201K subscribers</p>
+                        </div>
+                    </div>
+                    <div class="icons">
+                        <div class="icon"><i class="ri-arrow-right-s-line"></i></div>
+                    </div>
+                </div>
+                <div class="list">
+                    <div class="song-box">
+                        <div class="song">
+                            <img src="images/cover 11.jpg" alt="new song 4">
+                        </div>
+                        <div class="song-data">
+                            <h4 class="song-name">
+                                Annisokay
+                            </h4>
+                            <p>97K subscribers</p>
+                        </div>
+                    </div>
+                    <div class="icons">
+                        <div class="icon"><i class="ri-arrow-right-s-line"></i></div>
+                    </div>
+                </div>
+                <div class="list">
+                    <div class="song-box">
+                        <div class="song">
+                            <img src="images/cover 15.jpeg" alt="new song 4">
+                        </div>
+                        <div class="song-data">
+                            <h4 class="song-name">
+                                philosophy during walking
+                            </h4>
+                            <p>1M subscribers</p>
+                        </div>
+                    </div>
+                    <div class="icons">
+                        <div class="icon"><i class="ri-arrow-right-s-line"></i></div>
+                    </div>
+                </div>
+                <div class="list">
+                    <div class="song-box">
+                        <div class="song">
+                            <img src="images/cover 5.jpg" alt="new song 4">
+                        </div>
+                        <div class="song-data">
+                            <h4 class="song-name">
+                                love again
+                            </h4>
+                            <p>510K subscribers</p>
+                        </div>
+                    </div>
+                    <div class="icons">
+                        <div class="icon"><i class="ri-arrow-right-s-line"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

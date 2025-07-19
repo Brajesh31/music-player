@@ -1,0 +1,1089 @@
+/* font-family: "Edu AU VIC WA NT Arrows", cursive; */
+:root{
+    --primary: #0e1123;
+    --secondery: #fdf6f9;
+    --orange: #f0b341;
+    --green: #2bdc2b;
+    --purple: #fd49fd;
+    --red: #ea2929;
+    --lightsky: #4ecfe3;
+    --darkBlue: #171789;
+    --active: #242454;
+    --dark: #1a153b;
+    --black: #121212;
+    --transition-1: all 0.3s ease;
+    --transition-2: all 0.4s ease;
+}
+
+*::after ,
+*::before,
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    object-fit: cover;
+}
+
+ul ,
+li{
+    list-style: none;
+}
+
+body{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary);
+    display: flex;
+    font-family: "Poppins" ,sans-serif;
+}
+
+aside{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 100vh;
+    box-shadow: 1px 1px 7px rgba(255 ,255 ,255 ,0.12);
+    transition: var(--transition-2);
+}
+
+aside .component{
+    width: 100%;
+    height: 100%;
+}
+
+.logo{
+    width: 100%;
+    height: 55px;
+    user-select: none;
+}
+
+.logo a{
+    width: 100%;
+    height: 100%;
+    padding-inline: 15px;
+    display: flex;
+    align-items: center;
+    transition: var(--transition-1);
+}
+
+.logo a .icon{
+    font-size: 30px !important;
+    color: #9438e5;
+}
+
+.logo h1{
+    color: var(--lightsky);
+    padding: 0px 20px;
+    font-weight: bold;
+    font-family: "Edu AU VIC WA NT Arrows", cursive;
+    transition: var(--transition-2);
+}
+
+.component .nav-menu{
+    width: 100%;
+    height: calc(100% - 55px);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.component .menu{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.component .menu .title{
+    font-size: 15px;
+    font-weight: 600;
+    white-space: nowrap;
+    padding-inline: 10px;
+    color: #cdcdcd;
+    font-family: "Poppins" ,sans-serif;
+    transition: var(--transition-1);
+}
+
+.component .menu .link{
+    width: 100%;
+    height: 37px;
+    padding: 5px 10px;
+    position: relative;
+    transition: var(--transition-1);
+}
+
+.component .menu .link:hover{
+    background-color: #292525;
+}
+
+.component .menu .link.active::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: var(--green);
+    border-radius: 2px;
+    box-shadow: 0 3px 5px rgba(20, 229, 5, 0.989);
+    animation: up-down 1s ease forwards;
+    transition: var(--transition-2);
+}
+
+.component .menu .link.active{
+    background-color: var(--active);
+}
+
+@keyframes up-down {
+    from{
+        height: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    } to{
+        height: 100%;
+    }
+}
+
+.component .menu li .flow{
+    position: absolute;
+    right: -20px;
+    text-align: left;
+    top: 10px;
+    opacity: 0;
+    z-index: -10;
+    pointer-events: none;
+    transition: var(--transition-2);
+}
+
+.component .menu li a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: var(--transition-3);
+}
+
+.logo a .icon,
+.component .menu li a .icon{
+    width: 35px;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: var(--color);
+    transition: var(--transition-1);
+}
+
+.component .menu li a .name{
+    color: var(--secondery);
+    font-family: "Ubuntu" ,sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 1200px) {
+    aside .menu .title,
+    aside .logo h1,
+    aside .component .menu li a .name{
+        display: none;
+    }
+
+    aside{
+        width: 60px;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 100;
+        transition: var(--transition-2);
+    }
+
+    aside .logo a .icon,
+    aside .component .menu li a .icon{
+        width: 40px;
+        height: 40px;
+    }
+
+    aside .component .menu li .flow{
+        opacity: 0;
+        z-index: -100;
+        right: -130px;
+        padding: 3px 10px;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        width: 120px;
+        background-color: var(--dark);
+        color: var(--lightsky);
+        text-align: left;
+        transition: var(--transition-2);
+    }
+
+    aside .component .menu li:hover .flow{
+        opacity: 1;
+        z-index: 100;
+        top: 0;
+    }
+}
+
+@media (max-width: 991px){
+    aside{
+        position: fixed;
+        top: 0;
+        left: -100%;
+    }
+
+    aside{
+        background-color: var(--black);
+        width: 200px;
+    }
+
+    aside .menu .title, 
+    aside .logo h1, 
+    aside .component .menu li a .name{
+        display: inline-block;
+    }
+}
+
+/* Start Header */
+header{
+    width: 100%;
+    height: 45px;
+    border-radius: 5px;
+    background-color: var(--dark);
+    transition: var(--transition-2);
+}
+
+header .container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+header .search{
+    width: 70%;
+    border-radius: 5px 0 0 5px;
+    transition: var(--transition-2);
+}
+
+header .search .bar{
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+header .tools .mood,
+header .tools .icon,
+header .search .bar .icon{
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    font-size: 19px;
+    color: var(--secondery);
+    position: relative;
+    transition: var(--transition-1);
+}
+
+header .search .bar input{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    transition: var(--transition-1);
+    color: var(--lightsky);
+    font-size: 15px;
+}
+
+header .search .bar input::placeholder{
+    color: var(--lightsky);
+    font-size: 14px;
+}
+
+header .tools{
+    display: flex;
+    height: 100%;
+    gap: 4px;
+    transition: var(--transition-2);
+}
+
+header .tools .mood{
+    position: relative;
+
+}
+
+header .tools .mood .light,
+header .tools .mood .dark{
+    position: absolute;
+}
+
+header .tools .mood .light{
+    opacity: 0;
+}
+
+header .tools .mood:hover,
+header .tools .icon:hover{
+    background-color: var(--darkBlue);
+}
+
+.hide{
+    opacity: 0;
+}
+
+header .tools .mood .mood-name{
+    position: absolute;
+    bottom: -35px;
+    left: -30px;
+    border: 1px solid var(--lightsky);
+    background-color: var(--dark);
+    color: var(--lightsky);
+    white-space: nowrap;
+    text-wrap: nowrap;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 7px;
+    font-size: 14px;
+    z-index: -10;
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition-2);
+}
+
+header .tools .mood:hover .mood-name{
+    opacity: 1;
+    z-index: 10;
+}
+/* End Header */
+
+/* Start Main */
+main{
+    margin-left: 200px;
+    flex: 6;
+    width: 100%;
+    height: 100%;
+    padding: 10px 15px;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 1200px) {
+    main{
+        margin-left: 60px;
+    }
+}
+
+main .main-content{
+    margin-block: 15px;
+    width: 100%;
+    height: 100%;
+    transition: var(--transition-1);
+}
+
+.main-content .popular .section-title{
+    margin-bottom: 10px;
+    color: var(--orange);
+    font-size: 21px;
+    font-family: "Ubuntu" ,sans-serif;
+    font-weight: 600;
+    transition: var(--transition-1);
+}
+
+.main-content .popular {
+    overflow: hidden;
+    background-color: var(--black);
+    padding: 15px 8px;
+    border-radius: 3px;
+}
+.main-content .popular .head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    transition: var(--transition-1);
+}
+
+.main-content .popular .head button{
+    width: 35px;
+    height: 35px;
+    border-radius: 4px;
+    background-color: var(--dark);
+    color: var(--secondery);
+    font-size: 24px;
+    border: none;
+    box-shadow: 2px 3px 10px #657bca33;
+    transition: var(--transition-2);
+}
+
+.main-content .popular .head button:hover{
+    background-color: #212181;
+}
+
+.main-content .popular .head button#prev{
+    margin-right: 10px;
+}
+
+.popular .slider{
+    width: 100%;
+    height: 250px;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(9 ,1fr);
+    gap: 15px;
+    overflow-x: auto;
+    transition: var(--transition-1);
+}
+
+.popular .slider::-webkit-scrollbar{
+    display: none;
+}
+
+.popular .slider .slide{
+    width: 220px;
+    height: 100%;
+    padding: 1px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--dark);
+    box-shadow: 1px 3px 10px rgba(57, 81, 187, 0.2);
+}
+
+.popular .slider .slide:hover{
+    box-shadow: none;
+}
+
+.popular .slider .slide .img{
+    width: 100%;
+    height: 70%;
+    border-radius: 0 0 0 10px;
+}
+
+.popular .slider .slide .detail{
+    margin-top: -10px;
+    padding: 10px;
+}
+
+.popular .slider .slide .detail .song-name{
+    color: var(--secondery);
+    font-size: 17px;
+    font-family: tahoma ,sans-serif;
+    white-space: nowrap;
+    white-space: nowrap;
+}
+
+.popular .slider .slide .detail .album{
+    white-space: nowrap;
+    color: var(--lightsky);
+    font-size: 11px;
+    margin-top: 4px;
+}
+
+.playlist{
+    margin-block: 15px;
+    padding: 10px;
+    width: 100%;
+}
+
+.playlist .header{
+    width: 100%;
+    padding: 15px 0;
+    display: flex;
+    align-self: center;
+    justify-content: flex-start;
+    gap: 15px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-top: 2px solid #cdcdcd83;
+    transition: var(--transition-2);
+}
+
+.playlist .header .item{
+    height: 100%;
+    margin-top: -14px;
+    position: relative;
+}
+
+.playlist .header .item.active::before,
+.playlist .header .item:hover::before{
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--red);
+    box-shadow: 2px 0 7px var(--red) ,
+    5px 0 10px var(--red) ,
+    10px 0 15px var(--red) ,
+    17px 0 24px var(--red);
+}
+
+.playlist .header .item>p{
+    color: var(--lightsky);
+    padding: 5px;
+    font-size: 15px;
+}
+
+.playlist .header .item.active>p{
+    color: var(--red);
+}
+
+.playlist table{
+    width: 100%;
+    background-color: var(--black);
+    padding: 10px;
+    border-radius: 4px;
+    border-spacing: 0px 7px;
+    box-shadow: 0 2px 5px rgba(136 ,148 ,171 ,0.2) ,
+    0 24px 20px -24px rgba(71 ,82 ,107 ,0.1);
+    transition: var(--transition-2);
+}
+
+.playlist table tbody tr{
+    cursor: pointer;
+    transition: var(--transition-1);
+}
+
+.playlist table tbody tr:hover,
+.playlist table tbody tr.active{
+    background-color: var(--dark);
+}
+
+.playlist table tbody tr td{
+    color: #cbcaca;
+    font-size: 13px;
+    padding: 8px;
+    white-space: nowrap;
+}
+.playlist table tbody tr td img{
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+}
+
+.playlist table tbody tr td i{
+    font-size: 18px;
+    padding: 8px;
+    border-radius: 10px;
+    transition: var(--transition-1);
+}
+
+@media (max-width: 940px){
+    .playlist table tbody tr td{
+        font-size: 12px;
+    }
+}
+
+.feture{
+    margin-block: 15px;
+    width: 100%;
+    height: 250px;
+    transition: var(--transition-1);
+}
+
+.feture .container{
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    transition: var(--transition-1);
+}
+
+.feture .offer-box{
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    flex: 4;
+    border-radius: 8px;
+    background-image: linear-gradient(100deg ,#39393ad7 ,#5a5656);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    transition: var(--transition-1);
+}
+
+.feture .offer-box h2{
+    color: var(--secondery);
+    font-size: 25px;
+}
+
+.feture .offer-box h2>span{
+    font-family: "Edu AU VIC WA NT Arrows", cursive;
+    color: var(--orange);
+}
+
+.feture .offer-box p{
+    color: #cdcdcd;
+    font-size: 14px;
+    margin-block: 5px;
+    font-weight: 500;
+    font-family: "Poppins" ,sans-serif;
+}
+
+.feture .offer-box button{
+    padding: 7px 20px;
+    border-radius: 7px;
+    border: 1px solid transparent;
+    background-color: var(--orange);
+    color: var(--secondery);
+    font-size: 15px;
+    transition: var(--transition-1);
+}
+
+.feture .offer-box button:hover{
+    border-color: var(--orange);
+    color: var(--orange);
+    background-color: transparent;
+}
+
+.feture .offer-box .img{
+    height: 100%;
+    width: 60%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.feture .offer-box .img img{
+    user-select: none;
+    transform: rotateX(30deg) rotateY(339deg);
+}
+
+.feture .static{
+    flex: 2;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.static .sta-head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 7px 0;
+    margin-bottom: 8px;
+    transition: var(--transition-1);
+}
+
+.static .sta-head h4{
+    color: #5a5656;
+    font-size: 15px;
+}
+
+.static .sta-head p{
+    color: var(--red);
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.static .boxs{
+    display: grid;
+    grid-template-rows: repeat(3 ,1fr);
+    gap: 10px;
+}
+
+.static .boxs .box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 5px 10px;
+    border-radius: 7px;
+    background-color: var(--black);
+    box-shadow: 1px 3px 10px rgba(136 ,148 ,171 ,0.2);
+    transition: var(--transition-1);
+}
+
+.static .boxs .box:hover{
+    box-shadow: 1px 3px 10px rgba(136 ,148 ,171 ,0.1);
+}
+
+.static .boxs .box .box-data .b-name{
+    color: #cdcdcd;
+    font-size: 15px;
+}
+
+.static .boxs .box .box-data .num{
+    color: var(--secondery);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.side-bar .chanel .profile .icon,
+.static .boxs .box .icon{
+    color: var(--purple);
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-1);
+}
+
+.static .boxs .box .icon:hover{
+    background-color: var(--purple);
+    color: var(--secondery);
+    border-radius: 8px;
+}
+
+@media screen and (max-width:1090px) {
+    .feture{
+        height: 100%;
+    }
+    .feture .container{
+        flex-direction: column;
+    }
+
+    .feture .offer-box ,
+    .feture .static{
+        width: 100%;
+        flex: 1;
+    }
+}
+
+/* Start Side Bar */
+
+.side-bar{
+    flex: 2;
+    padding: 10px 15px;
+    background-color: var(--black);
+}
+
+
+.side-bar .chanel{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: space-between;
+    transition: var(--transition-1);
+}
+
+.side-bar .chanel .chanel-btn{
+    padding: 7px 20px;
+    border: 1px solid var(--red);
+    color: var(--red);
+    font-size: 13px;
+    background-color: transparent;
+    border-radius: 25px;
+    box-shadow: 1px 3px 10px #ef141462;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    white-space: nowrap;
+    transition: var(--transition-1);
+}
+
+.side-bar .chanel .chanel-btn> i{
+    font-size: 20px;
+}
+
+.side-bar .chanel .chanel-btn::before{
+    content: "";
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--red);
+    z-index: -1;
+    transition: var(--transition-1);
+}
+
+.side-bar .chanel .chanel-btn:hover{
+    transition-duration: 0.15s;
+    color: var(--secondery);
+}
+
+.side-bar .chanel .chanel-btn:hover::before{
+    left: 0;
+}
+
+.side-bar .chanel .profile .icon{
+    color: var(--green);
+}
+
+.side-bar .chanel .chanel-btn,
+.side-bar .chanel .profile{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.side-bar .chanel .profile .pro-img{
+    width: 45px;
+    height: 45px;
+    padding: 2px;
+    border-radius: 50%;
+    background-image: conic-gradient(#e83a3a 30%,#d12dd1 35% 60% ,#3e3ed3 70% 100%);
+}
+
+.side-bar .container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transition: var(--transition-2);
+}
+
+.side-bar .container .new{
+    margin-block: 15px;
+}
+
+.side-bar .container .head-data{
+    width: 100%;
+    padding: 7px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    transition: var(--transition-1);
+}
+
+.side-bar .container .head-data .head-name{
+    color: #a19b9b;
+    font-size: 15px;
+    font-family: "Poppins" ,sans-serif;
+}
+
+.side-bar .container .head-data .see{
+    color: var(--red);
+    font-size: 13px;
+    cursor: pointer;
+    transition: var(--transition-1);
+}
+
+.static .sta-head p:hover,
+.side-bar .container .head-data .see:hover{
+    opacity: 0.8;
+}
+
+.side-bar .container .list{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 8px;
+    border-radius: 5px;
+    box-shadow: 1px 3px 7px rgba(255 ,255 ,255 ,0.12);
+    transition: var(--transition-1);
+}
+
+.side-bar .container .list:hover{
+    box-shadow: 0px 2px 5px rgba(255 ,255 ,255 ,0.10);
+}
+
+.side-bar .container .list .song{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.side-bar .container .list .song-name{
+    color: var(--secondery);
+    font-size: 15px;
+    font-family: "Ubuntu" ,sans-serif;
+} 
+
+.side-bar .container .list p{
+    font-size: 12px;
+    color: #706c6c;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+.favourite .list .song-box,
+.more .list .song-box{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.favourite .list,
+.more .list{
+    justify-content: space-between;
+}
+
+.more .list .icons{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.favourite .list .icon,
+.more .list .icons .icon{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+    color: #706c6c;
+}
+
+.more .list .icons .icon.love{
+    color: var(--red);
+    border-radius: 7px;
+    transition: var(--transition-1);
+}
+
+.more .list .icons .icon.love:hover{
+    color: var(--secondery);
+    background-color: var(--red);
+}
+
+.favourite .list{
+    counter-increment: counter;
+    position: relative;
+    cursor: pointer;
+}
+
+.favourite .list::before{
+    content: counter(counter);
+    position: absolute;
+    left: -10px;
+    top: 0;
+    color: #4ecfe3;
+    width: fit-content;
+    height: 100%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    z-index: 0;
+    font-family: "Edu AU VIC WA NT Arrows", cursive;
+}
+
+@media (max-width: 991px){
+    main{
+        margin-left: 0;
+    }
+
+    aside .component .menu li:hover .flow{
+        opacity: 0;
+        z-index: -100;
+        top: 0;
+    }
+
+    .side-bar .container .list .song-name{
+        font-size: 13px;
+    }
+
+    .side-bar .container .list p{
+        font-size: 10px;
+    }
+    .static .sta-head p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 873px){
+    body{
+        flex-direction: column;
+    }
+    .side-bar{
+        margin-left: 0;
+        width: 100%;
+    }
+    header{
+        width: 50%;
+    }
+    .side-bar .chanel{
+        position: absolute;
+        top: 10px;
+        width: 47%;
+        right: 15px;
+        box-shadow: 2px 3px 10px rgba(255 ,255 ,255 ,0.10);
+        border-radius: 5px;
+        padding: 5px 10px;
+    }
+
+    main .main-content{
+        margin-top: 25px;
+    }
+    .side-bar .chanel,
+    .side-bar .container{
+        padding: 10px 15px;
+    }
+
+    .side-bar .container .list .song-name{
+        font-size: 15px;
+    }
+
+    .side-bar .container .list p{
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 616px) {
+    header{
+        margin-top: 80px;
+        width: 100%;
+    }
+
+    .side-bar .chanel{
+        left: 0;
+        right: 0;
+        margin: 5px auto;
+        width: 100%;
+        padding: 7px 15px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .playlist table{
+        width: 100%;
+    }
+
+    .playlist table tbody tr td{
+        font-size: 10px;
+        white-space: wrap;
+    }
+
+    .playlist table tbody tr td i{
+        padding: 5px;
+        font-size: 17px;
+    }
+
+    .playlist table tbody tr td:nth-child(6){
+        display: none;
+    }
+    main,
+    .side-bar,
+    .playlist{
+        padding-inline: 8px;
+    }
+    .playlist table{
+        padding: 5px;
+    }
+}
